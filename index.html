@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeiboNet</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+			scroll-behavior: smooth;
+        }
+
+        header {
+			position: sticky;
+			top: 0;
+			z-index: 999;
+            display: flex;
+            align-items: center;
+            <!-- justify-content: center; -->
+            <!-- border-bottom: 1px solid #ccc; -->
+            <!-- padding: 10px; -->
+            position: relative;
+			height: 150px;
+			background-color: white;
+        }
+
+        .logo {
+            position: relative;
+            <!-- left: 20px; -->
+			padding-bottom: 50px;
+			padding-right: 100px;
+            height: 100px;
+        }
+
+        nav {
+            display: flex;
+            gap: 40px;
+			<!-- padding-right: 300px; -->
+        }
+		
+        nav a.active {
+            background-color: #f0f0f0;
+            <!-- color: white; -->
+        }
+		
+        nav a {
+			height:20px;
+            text-decoration: none;
+            color: #464646;	
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 7px 40px;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+        }
+
+		.NeiboNet-Page {
+            text-align: left;
+            position: relative;
+			padding-bottom: 50px;
+        }
+        .NeiboNet-Page img {
+            max-width: 100%;
+            height: auto;
+			display: block;
+            margin: 0;
+        }
+		.neibo-title {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            font-size: 48pt;
+            font-weight: bold;
+        }
+		.neibo-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            font-size: 24pt;
+        }
+		.hidden-text
+		{
+		    position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+			font-size: 2pt;
+			z-index: -1;
+		}
+		section {
+		padding-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+		.contact-form {
+		    position: absolute;
+            top: 15%;
+            left: 5%;
+			height: 650px;
+            width: 1300px;
+            background: #fff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			z-index: 2;
+        }
+		
+		.contact-form .row {
+            display: flex;
+            gap: 50px;
+        }
+
+        .contact-form .row > div {
+            flex: 1;
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            color: #cc6600;
+            margin-bottom: 20px;
+			font-size: 36pt;
+        }
+
+        .contact-form label {
+			color: #757373;			
+			padding-top: 5px;
+            display: block;
+            margin-bottom: 8px;
+			font-size: 18pt;
+            <!-- font-weight: bold; -->
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+			font-size: 16pt;
+			color: #757373;
+        }
+
+        .contact-form textarea {
+            resize: none;
+        }
+
+        .contact-form button {
+            width: 40%;
+            background-color: #fae100;
+            border: none;
+            padding: 7px;
+            font-size: 16pt;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+			color: #757373;
+        }
+
+        .contact-form button:hover {
+            background-color: #e6b800;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: -15px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="LogoBanner.jpg" alt="NeiboNet Logo" class="logo">
+        <nav>
+            <a href="#about">About us</a>
+            <a href="#learn-more">Learn more</a>
+			<a href="#OurServices">Our Services</a>
+            <a href="#Cooperation">Cooperation</a>
+            <a href="#download">Download</a>
+			<a href="#contact">Contact us</a>
+        </nav>
+    </header>
+
+    <div class="NeiboNet-Page">
+        <img src="MainImage.jpg" alt="Main Image">
+    </div>
+    <section id="about" class="NeiboNet-Page">
+        <img src="AboutUs.jpg" alt="About Us">
+    </section>
+
+    <section id="learn-more" class="NeiboNet-Page">
+        <img src="LearnMore.jpg" alt="Learn More">
+    </section>
+	
+    <section id="OurServices" class="NeiboNet-Page">
+        <img src="OurServices.jpg" alt="Our Services">
+    </section>
+	
+    <section id="Cooperation" class="NeiboNet-Page">
+        <img src="Cooperation.jpg" alt="Cooperation">
+    </section>
+
+    <section id="download" class="NeiboNet-Page">
+        <img src="Download.jpg" alt="Download">
+    </section>
+	
+	<section id="contact" class="NeiboNet-Page">
+        <img src="ContactUs.jpg" alt="Contact us">
+		<form class="contact-form" action="mailto:evanhuang10@yahoo.com" method="POST" enctype="text/plain">
+			<h2 style="padding-bottom: 40px">CONTACT US</h2>
+			<div class="row">
+				<div>
+					<label for="name">Name*</label>
+					<input type="text" id="name" name="name" required>
+				</div>
+				<div>
+					<label for="inquiry-type">Inquiry Type*</label>
+					<select id="inquiry-type" name="inquiry-type"  required>
+						<option value="">Select an option</option>
+						<option value="seek-cooperation">Seek Commercial Cooperation</option>
+						<option value="individual-partner">Become an Individual Partner</option>
+						<option value="customer-support">Customer Support</option>
+						<option value="suggestion-complain">Suggestion/Complain</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div>
+					<label for="email">Email*</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+				<div>
+					<label for="phone">Phone</label>
+					<div class="row" style="padding-bottom: 30px">
+						<input type="tel" id="phone" name="phone">
+					</div>
+				</div>
+			</div>
+
+			<label for="message">Message*</label>
+			
+			<textarea id="message" name="message" rows="6" maxlength="500" required></textarea>
+			<div class="row" style="padding-left: 38%">
+				<button type="submit">SEND</button>
+			</div>
+		</form>
+	</section>
+	<script>
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
